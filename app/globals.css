@@ -1,4 +1,55 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  
+@tailwind components;
+@tailwind utilities;
+@import "@fontsource/azeret-mono";
+
+body {
+  @apply bg-background;
+}
+
+@layer base {
+  :root {
+    --background: 285 11% 93%;
+    --foreground: 300 4% 9%;
+    --card: 285 11% 93%;
+    --card-foreground: 300 4% 9%;
+    --popover: 285 11% 93%;
+    --popover-foreground: 300 4% 9%;
+    --primary: 280 18% 26%;
+    --primary-foreground: 285 11% 93%;
+    --secondary: 281 25% 68%;
+    --secondary-foreground: 300 4% 9%;
+    --muted: 285 12% 20%;
+    --muted-foreground: 300 5% 70%;
+    --accent: 279 32% 45%;
+    --accent-foreground: 285 11% 93%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 300 4% 9%;
+    --border: 285 12% 20%;
+    --input: 285 12% 20%;
+    --ring: 279 32% 40%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 285 11% 7%;
+    --foreground: 300 4% 91%;
+    --card: 285 11% 7%;
+    --card-foreground: 300 4% 91%;
+    --popover: 285 11% 7%;
+    --popover-foreground: 300 4% 91%;
+    --primary: 280 18% 74%;
+    --primary-foreground: 285 11% 7%;
+    --secondary: 281 25% 32%;
+    --secondary-foreground: 300 4% 91%;
+    --muted: 285 12% 80%;
+    --muted-foreground: 300 4% 91%;
+    --accent: 279 32% 55%;
+    --accent-foreground: 285 11% 7%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 300 6% 10%;
+    --border: 286 11% 60%;
+    --input: 285 12% 80%;
+    --ring: 279 32% 60%;
+  }
+}
