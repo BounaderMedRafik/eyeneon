@@ -10,7 +10,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { MoonIcon, SunIcon } from "lucide-react";
+import { MoonIcon, MoonStar, Sun, SunIcon, SunMoon } from "lucide-react";
+import MyButton from "./MyButton";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
@@ -26,13 +27,14 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          Light
+          <MyButton variant="link" text="Light">
+            <Sun size={15} />
+          </MyButton>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          System
+          <MyButton variant="link" text="Dark">
+            <MoonStar size={15} />
+          </MyButton>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
