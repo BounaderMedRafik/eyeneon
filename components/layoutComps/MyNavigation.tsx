@@ -24,12 +24,12 @@ const links = [
 const MyNavigation = () => {
   return (
     <div>
-      <div className="w-full">
+      <div className="w-full z-50 absolute top-0 right-0">
         <div className="container mx-auto flex justify-between items-center">
           <div className=" py-6">
             <MyLogo />
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="gap-2 items-center hidden md:flex">
             <div>
               <SearchButton />
             </div>
