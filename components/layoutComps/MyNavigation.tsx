@@ -63,9 +63,11 @@ const MyNavigation = () => {
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <Button variant={"link"} size={"icon"}>
-                          {index.icon}
-                        </Button>
+                        <a href={index.LinkTo} target="_blank">
+                          <Button variant={"link"} size={"icon"}>
+                            {index.icon}
+                          </Button>
+                        </a>
                       </TooltipTrigger>
                       <TooltipContent>
                         <div className="flex items-center text-xs gap-1">

@@ -34,9 +34,9 @@ export default function IntroductionPage() {
       <div className="mt-10">
         <MDXdesc title="How can i use EyeLow ?">
           EyeLow makes it incredibly easy to leverage its styling capabilities
-          for your own projects. By following a few simple steps, you'll be able
-          to use styled components wherever you need them. Here's a guide to
-          help you get started:{" "}
+          for your own projects. By following a few simple steps, you&apos;ll be
+          able to use styled components wherever you need them. Here&apos;s a
+          guide to help you get started:{" "}
         </MDXdesc>
         <div className="mt-4 w-fit border-accent/20 border-[1px] rounded-md">
           <Link href={"/docs/guide/installation"}>
