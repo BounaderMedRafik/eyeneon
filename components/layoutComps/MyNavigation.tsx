@@ -1,27 +1,51 @@
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { ArrowUpRight, PartyPopper, User2Icon } from "lucide-react";
+import {
+  ArrowUpRight,
+  GithubIcon,
+  LinkedinIcon,
+  PartyPopper,
+  TwitterIcon,
+  YoutubeIcon,
+} from "lucide-react";
 import SearchButton from "./SearchButton";
 import MyButton from "../Myui/MyButton";
 import { ModeToggle } from "../Myui/mode-toggle";
 import MyLogo from "../brand/MyLogo";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { usePathname, useRouter } from "next/navigation";
 
 const links = [
   {
-    name: "link",
-    LinkTo: "/link-to",
+    name: "Github",
+    LinkTo: "https://github.com/BounaderMedRafik",
+    icon: <GithubIcon size={15} />,
   },
   {
-    name: "link2",
-    LinkTo: "/link2-to",
+    name: "Linkedin",
+    LinkTo: "https://www.linkedin.com/in/bounader-med-rafik/",
+    icon: <LinkedinIcon size={15} />,
   },
   {
-    name: "link3",
-    LinkTo: "/link3-to",
+    name: "Twitter",
+    LinkTo: "https://twitter.com/bwnadrrr",
+    icon: <TwitterIcon size={15} />,
+  },
+  {
+    name: "Youtube",
+    LinkTo: "https://www.youtube.com/channel/UCj_nkiWsd2mACSBsI8pny4g",
+    icon: <YoutubeIcon size={15} />,
   },
 ];
 const MyNavigation = () => {
+  const router = usePathname();
   return (
     <div>
       <div className="container z-50 fixed top-0 right-1/2 translate-x-1/2 bg-background/20 backdrop-blur-md">
@@ -36,25 +60,29 @@ const MyNavigation = () => {
             <ul className="flex items-center">
               {links.map((index) => (
                 <li key={index.name}>
-                  <Button className="group" variant={"link"}>
-                    <Link
-                      className="flex items-center gap-2 "
-                      href={index.LinkTo}
-                    >
-                      {index.name}{" "}
-                      <ArrowUpRight
-                        className="opacity-0 mt-1 group-hover:mt-0 transition-all group-hover:opacity-100"
-                        size={15}
-                      />
-                    </Link>
-                  </Button>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Button variant={"link"} size={"icon"}>
+                          {index.icon}
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <div className="flex items-center text-xs gap-1">
+                          {index.name} <ArrowUpRight size={15} />
+                        </div>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </li>
               ))}
             </ul>
             <div className="flex items-center gap-2">
-              <MyButton text="Start Now" variant="secondary">
-                <PartyPopper size={15} />
-              </MyButton>
+              {router == "/" ? (
+                <MyButton text="Start Now" variant="secondary">
+                  <PartyPopper size={15} />
+                </MyButton>
+              ) : null}
               <ModeToggle />
             </div>
           </div>

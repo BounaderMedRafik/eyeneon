@@ -1,5 +1,4 @@
 import MySideBar from "@/components/docsComponents/MySideBar";
-import BackToTop from "@/components/layoutComps/BackToTop";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,13 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="w-[20%]">
           <MySideBar />
         </div>
-        <div className="p-10 relative w-full min-h-[90vh]">
-          {children}
-          <div className="h-screen">extrashit</div>
-        </div>
-      </div>
-      <div className="fixed bottom-10 right-10">
-        <BackToTop />
+        <div className="p-10 relative w-full min-h-[90vh]">{children}</div>
       </div>
     </div>
   );

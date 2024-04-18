@@ -10,8 +10,10 @@ const NotFound = () => {
         404 Not Found <Ban className="text-destructive" size={50} />
       </div>
       <div className="mt-2">
-        This page{" "}
-        <span className="text-destructive font-bold">doesn&apos;t</span> exist.
+        the page you are trying to access{" "}
+        <span className="underline text-destructive underline-offset-4">
+          does not exist
+        </span>
       </div>
       <div className="mt-5">
         <Link href={"/"}>

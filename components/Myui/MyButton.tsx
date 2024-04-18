@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../ui/button";
 import { User2Icon } from "lucide-react";
 
-const MyButton = ({ text, variant, children, className }: any) => {
+const MyButton = ({ text, variant, children }: any) => {
   return (
     <div>
       <Button className="group relative opacity-95" variant={variant}>
