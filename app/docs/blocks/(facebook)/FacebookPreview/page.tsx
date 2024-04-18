@@ -11,10 +11,10 @@ const page = () => {
           <NavigationBar />
         </div>
         <div className="w-full flex justify-between   bg-slate-100 ">
-          <div className="w-[25%] border-r border-black ">
+          <div className="w-[25%] ">
             <SideBar />
           </div>
-          <div className="w-[25%] border-l border-l-black">
+          <div className="w-[25%] ">
             <SideBarRight />
           </div>
         </div>
