@@ -24,7 +24,7 @@ const links = [
 const MyNavigation = () => {
   return (
     <div>
-      <div className="w-full z-50 absolute top-0 right-0">
+      <div className="container z-50 fixed top-0 right-1/2 translate-x-1/2 bg-background/20 backdrop-blur-md">
         <div className="container mx-auto flex justify-between items-center">
           <div className=" py-6">
             <MyLogo />

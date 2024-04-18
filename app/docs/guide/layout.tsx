@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="w-[20%]">
           <MySideBar />
         </div>
-        <div className="p-10 w-full">{children}</div>
+        <div className="p-10 w-full min-h-[90vh]">{children}</div>
       </div>
     </div>
   );

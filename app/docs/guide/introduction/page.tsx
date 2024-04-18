@@ -39,9 +39,11 @@ export default function IntroductionPage() {
           help you get started:{" "}
         </MDXdesc>
         <div className="mt-4 w-fit border-accent/20 border-[1px] rounded-md">
-          <MyButton text="Installation Guide" variant="link">
-            <ArrowUpRight size={15} />
-          </MyButton>
+          <Link href={"/docs/guide/installation"}>
+            <MyButton text="Installation Guide" variant="link">
+              <ArrowUpRight size={15} />
+            </MyButton>
+          </Link>
         </div>
       </div>
     </div>

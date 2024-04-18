@@ -29,7 +29,7 @@ const linksBlock = [
 ];
 const MySideBar = () => {
   return (
-    <div className="border-r border-accent/20">
+    <div className="border-r border-accent/0 ">
       <div>
         <div className="font-heading font-bold">• Guide</div>
         <div className="">
