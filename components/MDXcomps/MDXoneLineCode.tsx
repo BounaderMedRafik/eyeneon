@@ -22,7 +22,7 @@ const MDXoneLineCode = ({ code }: any) => {
     }
   };
   return (
-    <div className="p-3 pl-5 group bg-accent/20 border-accent/40 flex items-center justify-between border-2 rounded-md font-heading">
+    <div className="p-3 pl-5 group bg-accent/20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] border-accent/40 flex items-center justify-between border-2 rounded-md font-heading">
       <div>$ {code}</div>
       <div className="opacity-0 group-hover:opacity-100 transition-all">
         <TooltipProvider>
