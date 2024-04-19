@@ -1,5 +1,6 @@
 import CreatePost from "@/components/Blockscomps/facebook/CreatePost";
 import NavigationBar from "@/components/Blockscomps/facebook/NavigationBar";
+import Post from "@/components/Blockscomps/facebook/Post";
 import SideBar from "@/components/Blockscomps/facebook/SideBar";
 import SideBarRight from "@/components/Blockscomps/facebook/SideBarRight";
 import React from "react";
@@ -18,6 +19,9 @@ const page = () => {
           <div className="w-[50%] mt-6">
             {/* feed */}
             <CreatePost />
+            <div className="mt-5">
+              <Post />
+            </div>
           </div>
           <div className="w-[25%] ">
             <SideBarRight />
