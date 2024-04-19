@@ -7,11 +7,11 @@ export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const FacebookInput = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
+  ({ icon, className, type, ...props }, ref) => {
     return (
       <>
         <div className="flex pl-2 text-slate-500 rounded-full bg-slate-100 items-center">
-          <Search size={25} />
+          {icon}
 
           <input
             type={type}

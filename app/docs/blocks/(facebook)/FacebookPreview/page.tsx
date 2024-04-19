@@ -5,7 +5,7 @@ import SideBar from "@/components/Blockscomps/facebook/SideBar";
 import SideBarRight from "@/components/Blockscomps/facebook/SideBarRight";
 import React from "react";
 
-const page = () => {
+const Facebookpage = () => {
   return (
     <div className="mt-36">
       <div className="container flex flex-col items-center justify-center border border-accent/20 rounded-md p-5 ">
@@ -32,4 +32,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Facebookpage;
