@@ -1,3 +1,4 @@
+import CreatePost from "@/components/Blockscomps/facebook/CreatePost";
 import NavigationBar from "@/components/Blockscomps/facebook/NavigationBar";
 import SideBar from "@/components/Blockscomps/facebook/SideBar";
 import SideBarRight from "@/components/Blockscomps/facebook/SideBarRight";
@@ -13,6 +14,10 @@ const page = () => {
         <div className="w-full flex justify-between   bg-slate-100 ">
           <div className="w-[25%] ">
             <SideBar />
+          </div>
+          <div className="w-[50%] mt-6">
+            {/* feed */}
+            <CreatePost />
           </div>
           <div className="w-[25%] ">
             <SideBarRight />
