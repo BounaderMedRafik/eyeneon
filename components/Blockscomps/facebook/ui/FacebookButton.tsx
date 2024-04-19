@@ -11,6 +11,9 @@ const buttonVariants = cva(
       variant: {
         default: "bg-slate-100 text-slate-800 hover:bg-slate-200",
         MiddleNav: "bg-transparent hover:bg-slate-100 text-slate-600",
+        like: "bg-blue-400 text-slate-50 hover:bg-blue-500",
+        love: "bg-rose-400 text-slate-50 hover:bg-rose-500",
+        emojie: "bg-yellow-400 text-slate-50 hover:bg-yellow-500",
       },
       size: {
         MiddleNavSize: "px-10 py-2 rounded-md",

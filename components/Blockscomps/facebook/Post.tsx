@@ -1,6 +1,7 @@
-import { Ellipsis, Globe, X } from "lucide-react";
+import { Ellipsis, Globe, MessageCircle, Repeat2, X } from "lucide-react";
 import React from "react";
 import { FacebookButton } from "./ui/FacebookButton";
+import ReactionButton from "./ui/ReactionButton";
 
 const username = "Bounader Med Rafik";
 const PostDesc = "i know the chemistry you know the business";
@@ -38,10 +39,22 @@ const Post = () => {
       <div className="">
         <div className="text-sm my-2">{PostDesc}</div>
         <img
-          className="w-full h-96 object-cover rounded-md"
+          className="w-full hover:opacity-90 transition-all cursor-pointer h-96 object-cover rounded-md"
           src="https://source.unsplash.com/random/666"
           alt=""
         />
+      </div>
+      <div className="mt-5 flex gap-3  py-2 border-y border-y-black/10">
+        {/* Buttons */}
+        <ReactionButton />
+        <FacebookButton className="w-full flex items-center gap-2">
+          <MessageCircle size={20} />
+          <div>Comment</div>
+        </FacebookButton>
+        <FacebookButton className="w-full flex items-center gap-2">
+          <Repeat2 size={20} />
+          <div>Share</div>
+        </FacebookButton>
       </div>
     </div>
   );
