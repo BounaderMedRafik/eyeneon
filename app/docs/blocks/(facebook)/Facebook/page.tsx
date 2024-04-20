@@ -1,3 +1,5 @@
+import NavigationBar from "@/components/Blockscomps/facebook/NavigationBar";
+import Post from "@/components/Blockscomps/facebook/Post";
 import { FacebookButton } from "@/components/Blockscomps/facebook/ui/FacebookButton";
 import { FacebookInput } from "@/components/Blockscomps/facebook/ui/FacebookInput";
 import MDXCodeBlock from "@/components/MDXcomps/MDXCodeBlock";
@@ -132,6 +134,181 @@ const faceBookComps = [
     Title: "Facebook Input",
     desc: "Facebook inputs for seach and posts making alot of what you see inputs used in their website, full based on shadcn/ui",
     codeTitle: "FacebookInput.tsx",
+  },
+  {
+    code: `import Image from "next/image";
+    import React from "react";
+    import { FacebookInput } from "./ui/FacebookInput";
+    import {
+      Bell,
+      CircleUserRound,
+      Gamepad2,
+      Grip,
+      Home,
+      HomeIcon,
+      MessageCircle,
+      MonitorPlay,
+      Store,
+      Users,
+      VideoIcon,
+      icons,
+    } from "lucide-react";
+    import { FacebookButton } from "./ui/FacebookButton";
+    import FacebookMiddleNavBtns from "./ui/FacebookMiddleNavBtns";
+    
+    const middleNav = [
+      {
+        name: "Home",
+        icon: <Home size={25} />,
+      },
+      {
+        name: "Video",
+        icon: <MonitorPlay size={25} />,
+      },
+      {
+        name: "Market Place",
+        icon: <Store size={25} />,
+      },
+      {
+        name: "Groups",
+        icon: <Users size={25} />,
+      },
+      {
+        name: "Gaming",
+        icon: <Gamepad2 size={25} />,
+      },
+    ];
+    
+    const rightNav = [
+      { name: "Dots", icon: <Grip size={25} /> },
+      {
+        name: "Messenger",
+        icon: <MessageCircle className="fill-slate-800" size={25} />,
+      },
+      { name: "Bell", icon: <Bell className="fill-slate-800" size={25} /> },
+      { name: "User", icon: <CircleUserRound size={25} /> },
+    ];
+    
+    const NavigationBar = () => {
+      return (
+        <div className="bg-white shadow-md relative z-20 px-5 py-1 rounded-t-lg flex items-center justify-between">
+          <div className="flex items-center justify-centers gap-2">
+            <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+              <Image
+                width={40}
+                height={40}
+                src={"/facebook/facebooklogo.png"}
+                alt="facebookLogo"
+              />
+            </a>
+            <div>
+              <FacebookInput placeholder="Search Facebook" />
+            </div>
+          </div>
+          <div className="flex  items-center justify-center gap-1">
+            {middleNav.map((index) => (
+              <div className="" key={index.name}>
+                <FacebookMiddleNavBtns tooltip={index.name}>
+                  {index.icon}
+                </FacebookMiddleNavBtns>
+              </div>
+            ))}
+          </div>
+          <div className="flex items-center gap-2">
+            {rightNav.map((index) => (
+              <div key={index.name}>
+                <FacebookButton size={"icon"}>{index.icon}</FacebookButton>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    };
+    
+    export default NavigationBar;
+    `,
+    ComponentsPreview: (
+      <div>
+        <NavigationBar />
+      </div>
+    ),
+    Title: "Facebook Navigation Bar",
+    desc: "The Facebook navigation bar is an important feature of the Facebook website and mobile app that allows users to easily access various sections and features of the platform. The navigation bar has undergone some changes and personalization in recent times to make it more user-centric and customizable.Facebook inputs for seach and posts making alot of what you see inputs used in their website, full based on shadcn/ui",
+    codeTitle: "FacebookInput.tsx",
+  },
+  {
+    code: `import { Ellipsis, Globe, MessageCircle, Repeat2, X } from "lucide-react";
+    import React from "react";
+    import { FacebookButton } from "./ui/FacebookButton";
+    import ReactionButton from "./ui/ReactionButton";
+    
+    const username = "Bounader Med Rafik";
+    const PostDesc = "i know the chemistry you know the business";
+    const smallMessage = "updated his profile picture";
+    const Post = () => {
+      return (
+        <div className="w-full p-5 bg-white shadow rounded-md border">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <img
+                className="h-9 w-9 object-cover rounded-full"
+                src="https://source.unsplash.com/random/666"
+                alt=""
+              />
+              <div>
+                <div className="text-sm font-semibold flex items-center gap-2 text-slate-700">
+                  {username}
+                  <div className="text-xs font-light">{smallMessage}</div>
+                </div>
+                <div className="flex text-xs items-center gap-1 text-slate-500">
+                  <div>4h • </div>
+                  <Globe size={10} />
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center ">
+              <FacebookButton size={"icon"} variant={"MiddleNav"}>
+                <Ellipsis size={25} />
+              </FacebookButton>
+              <FacebookButton size={"icon"} variant={"MiddleNav"}>
+                <X size={25} />
+              </FacebookButton>
+            </div>
+          </div>
+          <div className="">
+            <div className="text-sm my-2">{PostDesc}</div>
+            <img
+              className="w-full hover:opacity-90 transition-all cursor-pointer h-96 object-cover rounded-md"
+              src="https://source.unsplash.com/random/666"
+              alt=""
+            />
+          </div>
+          <div className="mt-5 flex gap-3  py-2 border-y border-y-black/10">
+            {/* Buttons */}
+            <ReactionButton />
+            <FacebookButton className="w-full flex items-center gap-2">
+              <MessageCircle size={20} />
+              <div>Comment</div>
+            </FacebookButton>
+            <FacebookButton className="w-full flex items-center gap-2">
+              <Repeat2 size={20} />
+              <div>Share</div>
+            </FacebookButton>
+          </div>
+        </div>
+      );
+    };
+    
+    export default Post;
+    `,
+    ComponentsPreview: (
+      <div className=" max-w-4xl mx-auto ">
+        <Post />
+      </div>
+    ),
+    Title: "Facebook Create Post",
+    desc: "The post box is located at the top of the News Feed. If you're posting to a friend's page, it will be below the photo section near the top of their page. If you're posting to a group, you'll find the box just below the cover photo",
+    codeTitle: "Post.tsx",
   },
 ];
 

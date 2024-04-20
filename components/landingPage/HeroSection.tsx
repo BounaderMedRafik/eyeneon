@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <div className="  bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] py-52 h-screen overflow-hidden  flex flex-col justify-center items-center relative">
       <div className="relative z-10">
-        <Link href={"/"}>
+        <Link href={"/docs/blocks/Facebook"}>
           <div className="text-xs mx-auto flex items-center gap-2 hover:-translate-y-0.5 transition-all  bg-accent text-slate-50 w-fit px-7 py-1 hover:opacity-80 rounded-full border border-black/10">
             See Whats New!!
             <div>
@@ -20,12 +20,16 @@ const HeroSection = () => {
           Unmakeable.
         </div>
         <div className="flex justify-center items-center mt-7">
-          <MyButton text="Blocks">
-            <Codesandbox size={15} />
-          </MyButton>
-          <MyButton variant="link" text="Know About us">
-            <Info size={15} />
-          </MyButton>
+          <Link href={"/docs/blocks/Facebook"}>
+            <MyButton text="Blocks">
+              <Codesandbox size={15} />
+            </MyButton>
+          </Link>
+          <Link href={"/docs/guide/introduction"}>
+            <MyButton variant="link" text="Know About us">
+              <Info size={15} />
+            </MyButton>
+          </Link>
         </div>
       </div>
       <div className="mt-8 relative z-20 flex items-center gap-2">

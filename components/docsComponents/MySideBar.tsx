@@ -18,7 +18,7 @@ const linksGuide = [
 const linksBlock = [
   {
     name: "Facebook",
-    linkTo: "/docs/blocks/facebook",
+    linkTo: "/docs/blocks/Facebook",
     icon: <Facebook size={15} />,
   },
   {
